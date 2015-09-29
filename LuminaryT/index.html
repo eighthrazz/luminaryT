@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<head>
+    <title>LuminaryT</title>
+    <link rel="stylesheet" href="Content/bootstrap.css" />
+    <link rel="stylesheet" href="Content/bootstrap-switch.css" />
+    <link rel="stylesheet" href="Content/bootstrap-slider.css" />
+    <style type='text/css'>
+        #rgbDataSlider, #speedDataSlider {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="panel-group">
+            <!-- top -->
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h1>LuminaryT</h1>
+                    <input type="checkbox" id="on_off" data-handle-width="87" disabled>
+                </div>
+            </div>
+
+            <!-- video -->
+            <div class="panel panel-default">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <div id="player-container">
+                    </div>
+                </div>
+            </div>
+
+            <!-- rgb slider -->
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div>
+                        <div id="color_picker_div">
+                            <canvas id="color_picker" width="256" , height="20"></canvas>
+                        </div>
+                        <div>
+                            <input id="rgbSlider" data-slider-enabled="false" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- speed slider -->
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div>
+                        <div>
+                            <h4>Speed</h4>
+                        </div>
+                        <div>
+                            <input id="speed" data-slider-enabled="false" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- debug -->
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div>
+                        <textarea id="debug" class="form-control" rows="12" style="resize:none"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="http://www.umediaserver.net/bin/FlashPlayer/umsplayer.js"></script>   <!-- UMS Player -->
+    <script src="Scripts/jquery-1.10.2.min.js"></script>
+    <script src="Scripts/jquery.signalR-2.1.2.min.js"></script> 
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/bootstrap-switch.js"></script>
+    <script src="Scripts/bootstrap-slider.min.js"></script>
+    <script src="signalr/hubs"></script>
+    <script src="Scripts/ui.js"></script>
+    <script src="Scripts/control.js"></script>
+    <script src="Scripts/global.js"></script>
+
+</body>
+</html>
